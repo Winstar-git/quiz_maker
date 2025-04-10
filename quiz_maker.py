@@ -8,6 +8,15 @@ from colorama import Fore, Style, init
 init(autoreset=True)
 console = Console()
 
+# ASCII art for walcome screen
+ascii_art = """
+  ██████╗ ██╗   ██╗██╗███████╗    ███╗   ███╗ █████╗ ██╗  ██╗███████╗██████╗ 
+ ██╔═══██╗██║   ██║██║╚══███╔╝    ████╗ ████║██╔══██╗██║ ██╔╝██╔════╝██╔══██╗
+ ██║   ██║██║   ██║██║  ███╔╝     ██╔████╔██║███████║█████╔╝ █████╗  ██████╔╝
+ ██║▄▄ ██║██║   ██║██║ ███╔╝      ██║╚██╔╝██║██╔══██║██╔═██╗ ██╔══╝  ██╔══██╗
+ ╚██████╔╝╚██████╔╝██║███████╗    ██║ ╚═╝ ██║██║  ██║██║  ██╗███████╗██║  ██║
+  ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+"""
 # Create folder for quizzes and category of quizzes
 category = input("Enter quiz category (e.g. math, science, anime): ")
 folder_path = f"Quizzes/{category}"
