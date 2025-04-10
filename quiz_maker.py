@@ -27,7 +27,8 @@ while question_count <= num_question:
 choices = {}
 for option in ['a', 'b', 'c', 'd']:
     choices[option] = input(f"Choice {option}")
-answer = 
+
+answer = input("Enter correct answer (a/b/c/d): ")
 
 # Use dictionary to store the quiestion data
 question_data ={
