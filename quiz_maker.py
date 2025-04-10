@@ -24,7 +24,12 @@ def typewriter(text, delay=0.03):
         sys.stdout.flush()
         time.sleep(delay)
     print()
-    
+
+# Loading effect
+def loading(message="Loading...", delay=1.5):
+    with console.status(f"[bold green]{message}"):
+        time.sleep(delay)
+        
 # Create folder for quizzes and category of quizzes
 category = input("Enter quiz category (e.g. math, science, anime): ")
 folder_path = f"Quizzes/{category}"
