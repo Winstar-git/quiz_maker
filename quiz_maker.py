@@ -6,7 +6,7 @@ folder_path = f"Quizzes/{category}"
 os.makedirs(folder_path, exist_ok=True)
 
 filename = input("Enter quiz filename (without .txt): ") + ".txt"
-folder_path = os.path.join(folder_path, filename)
+file_path = os.path.join(folder_path, filename)
 
 # Use while loop for the number of question
 while True:
@@ -36,6 +36,11 @@ while question_count <= num_question:
         print(f"{option}) {choices[option]}")
     print(f"Correct Answer: {answer.upper()}")
 
+# Saving the question data 
+save = input("Save this question? (y/n): ").lower()
+if save == 'y':
+    try:
+        with open(file_path
 # Use dictionary to store the quiestion data
 question_data ={
     "question" : question,
