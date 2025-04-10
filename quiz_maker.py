@@ -26,10 +26,15 @@ def typewriter(text, delay=0.03):
     print()
 
 # Loading effect
-def loading(message="Loading...", delay=1.5):
+def loading(message="Loading...", delay=2.5):
     with console.status(f"[bold green]{message}"):
         time.sleep(delay)
-        
+
+# Welcome Screen 
+console.print(Panel.fit(ascii_art, border_style="bright_yellow"))
+loading("Booting up Quiz Maker...")
+typewriter(" Ready to build your quiz...\n")
+
 # Create folder for quizzes and category of quizzes
 category = input("Enter quiz category (e.g. math, science, anime): ")
 folder_path = f"Quizzes/{category}"
