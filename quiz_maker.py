@@ -18,3 +18,14 @@ while True:
             print("Please enter a number greater than 0.")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
+
+question = 
+choices =
+answer = 
+
+# Use dictionary to store the quiestion data
+question_data ={
+    "question" : question,
+    "choices" : choices,
+    " answer" : answer,
+}
