@@ -54,5 +54,6 @@ while question_count <= num_question:
             print("Question saved!")
         except Exception as e:
             print(f"Error saving question: {e}")
+        question_count += 1
     else:
         print("Skipped saving the question.")
