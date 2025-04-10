@@ -46,7 +46,10 @@ if save == 'y':
                 text.write(f"{option}) {choices[option]}")
             text.write(f"Answer: {answer}")
         print("Question saved!")
-
+    except Exception as e:
+        print(f"Error saving question: {e}")
+else:
+    print("Skipped saving the question.")
 # Use dictionary to store the quiestion data
 question_data ={
     "question" : question,
