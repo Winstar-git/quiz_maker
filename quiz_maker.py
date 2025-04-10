@@ -19,7 +19,10 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
-question = 
+# Making the quiz
+question_count = 1
+while question_count <= num_question:
+    question = input("Enter your question.")
 choices =
 answer = 
 
