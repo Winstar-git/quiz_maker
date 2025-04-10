@@ -1,4 +1,12 @@
 import os
+import time
+import sys
+from rich.console import Console
+from rich.panel import Panel
+from colorama import Fore, Style, init
+
+init(autoreset=True)
+console = Console()
 
 # Create folder for quizzes and category of quizzes
 category = input("Enter quiz category (e.g. math, science, anime): ")
