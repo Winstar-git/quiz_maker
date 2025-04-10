@@ -57,3 +57,12 @@ while question_count <= num_question:
         question_count += 1
     else:
         print("Skipped saving the question.")
+
+# Ask if the user wants to continue or stop
+    if question_count > num_question:
+        print("All questions inputted! Quiz creation complete!")
+        break
+    another_one = input("Add another question? (y/n): ").lower()
+    if another_one != 'y':
+        print("Quiz creation complete! Goodbye!!")
+        break
