@@ -17,6 +17,14 @@ ascii_art = """
  ╚██████╔╝╚██████╔╝██║███████╗    ██║ ╚═╝ ██║██║  ██║██║  ██╗███████╗██║  ██║
   ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 """
+# Typewiter effect
+def typewriter(text, delay=0.03):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+    
 # Create folder for quizzes and category of quizzes
 category = input("Enter quiz category (e.g. math, science, anime): ")
 folder_path = f"Quizzes/{category}"
