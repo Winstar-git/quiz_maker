@@ -40,7 +40,13 @@ while question_count <= num_question:
 save = input("Save this question? (y/n): ").lower()
 if save == 'y':
     try:
-        with open(file_path
+        with open(file_path, 'a', encoding="utf-8") as text:
+            text.write(f"Question: {question}")
+            for option in ['a', 'b', 'c', 'd']:
+                text.write(f"{option}) {choices[option]}")
+            text.write(f"Answer: {answer}")
+        print("Question saved!")
+
 # Use dictionary to store the quiestion data
 question_data ={
     "question" : question,
