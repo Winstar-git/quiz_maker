@@ -33,43 +33,43 @@ def loading(message="Loading...", delay=2.5):
 # Welcome Screen 
 console.print(Panel.fit(ascii_art, border_style="bright_yellow"))
 loading("Booting up Quiz Maker...")
-typewriter(" Ready to build your quiz...\n")
+typewriter("🧠 Ready to build your quiz...\n")
 
 # Create folder for quizzes and category of quizzes
-category = input("Enter quiz category (e.g. math, science, anime): ")
+category = input("📁 Enter quiz category (e.g. math, science, anime): ")
 folder_path = f"Quizzes/{category}"
 os.makedirs(folder_path, exist_ok=True)
 
-filename = input("Enter quiz filename (without .txt): ") + ".txt"
+filename = input("📝 Enter quiz filename (without .txt): ") + ".txt"
 file_path = os.path.join(folder_path, filename)
 
 # Use while loop for the number of question
 while True:
     try:
-        num_question = int(input("How many question would you like to input?: "))
+        num_question = int(input("🔢 How many question would you like to input?: "))
         if num_question > 0:
             break
         else:
-            print("Please enter a number greater than 0.")
+            print("❌ Please enter a number greater than 0.")
     except ValueError:
-        print("Invalid input. Please enter a valid number.")
+        print("❌ Invalid input. Please enter a valid number.")
 
 # Making the quiz
 question_count = 1
 while question_count <= num_question:
-    question = input("Enter your question: ")
+    question = input("❓Enter your question: ")
 
     choices = {}
     for option in ['a', 'b', 'c', 'd']:
-        choices[option] = input(f"Choice {option}: ")
+        choices[option] = input(f"👉 Choice {option}: ")
 
-    answer = input("Enter correct answer (a/b/c/d): ")
+    answer = input("✔ Enter correct answer (a/b/c/d): ")
 
 # Print to check the question data if correct
     print(f"{question}")
     for option in ['a', 'b', 'c', 'd']:
         print(f"{option}) {choices[option]}")
-    print(f"Correct Answer: {answer.upper()}")
+    print(f"✔ Correct Answer: {answer.upper()}")
 
     # Use dictionary to store the quiestion data
     question_data ={
@@ -78,7 +78,7 @@ while question_count <= num_question:
         " answer" : answer,
     }
 # Saving the question data 
-    save = input("Save this question? (y/n): ").lower()
+    save = input("💾 Save this question? (y/n): ").lower()
     if save == 'y':
         try:
             with open(file_path, 'a', encoding="utf-8") as text:
@@ -86,18 +86,18 @@ while question_count <= num_question:
                 for option, choice in question_data["choices"].items():
                     text.write(f"{option}) {choice}")
                 text.write(f"Answer: {question_data[' answer'].upper()}")
-            print("Question saved!")
+            print("✅ Question saved!")
         except Exception as e:
-            print(f"Error saving question: {e}")
+            print(f"❌ Error saving question: {e}")
         question_count += 1
     else:
-        print("Skipped saving the question.")
+        print("⏩ Skipped saving the question.")
 
 # Ask if the user wants to continue or stop
     if question_count > num_question:
-        print("All questions inputted! Quiz creation complete!")
+        print("✅ All questions inputted! Quiz creation complete!")
         break
-    another_one = input("Add another question? (y/n): ").lower()
+    another_one = input("➕ Add another question? (y/n): ").lower()
     if another_one != 'y':
-        print("Quiz creation complete! Goodbye!!")
+        print("✅Quiz creation complete! Goodbye!!")
         break
