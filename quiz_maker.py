@@ -22,13 +22,13 @@ while True:
 # Making the quiz
 question_count = 1
 while question_count <= num_question:
-    question = input("Enter your question.")
+    question = input("Enter your question: ")
 
-choices = {}
-for option in ['a', 'b', 'c', 'd']:
-    choices[option] = input(f"Choice {option}")
+    choices = {}
+    for option in ['a', 'b', 'c', 'd']:
+        choices[option] = input(f"Choice {option}: ")
 
-answer = input("Enter correct answer (a/b/c/d): ")
+    answer = input("Enter correct answer (a/b/c/d): ")
 
 # Use dictionary to store the quiestion data
 question_data ={
