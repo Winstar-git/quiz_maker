@@ -50,7 +50,7 @@ while question_count <= num_question:
                 text.write(f"Question: {question_data['question']}")
                 for option, choice in question_data["choices"].items():
                     text.write(f"{option}) {choice}")
-                text.write(f"Answer: {answer}")
+                text.write(f"Answer: {question_data[' answer'].upper()}")
             print("Question saved!")
         except Exception as e:
             print(f"Error saving question: {e}")
