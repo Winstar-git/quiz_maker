@@ -23,7 +23,10 @@ while True:
 question_count = 1
 while question_count <= num_question:
     question = input("Enter your question.")
-choices =
+
+choices = {}
+for option in ['a', 'b', 'c', 'd']:
+    choices[option] = input(f"Choice {option}")
 answer = 
 
 # Use dictionary to store the quiestion data
