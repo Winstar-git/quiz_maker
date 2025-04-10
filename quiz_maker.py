@@ -30,6 +30,12 @@ while question_count <= num_question:
 
     answer = input("Enter correct answer (a/b/c/d): ")
 
+# Print to check the question data if correct
+    print(f"{question}")
+    for option in ['a', 'b', 'c', 'd']:
+        print(f"{option}) {choices[option]}")
+    print(f"Correct Answer: {answer.upper()}")
+
 # Use dictionary to store the quiestion data
 question_data ={
     "question" : question,
