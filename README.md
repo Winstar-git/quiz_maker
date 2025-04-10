@@ -1,6 +1,6 @@
-## 🧠 Quiz Maker (Terminal-Based Python App)
+## 🧠 Quiz Maker (Terminal-Based Python)
 
-Quiz Creator is a terminal-based Python program that allows users to build and save multiple-choice quizzes. Users can choose a quiz category, name the quiz file, input a set number of questions, and preview each one before saving. The program uses animated text effects and colorful prompts to create a fun and user-friendly experience, storing all quizzes in organized folders for easy access.
+Quiz maker is a terminal-based Python program that allows users to build and save multiple-choice quizzes. Users can choose a quiz category, name the quiz file, input a set number of questions, and preview each one before saving. The program uses animated text effects and colorful prompts to create a fun and user-friendly experience, storing all quizzes in organized folders for easy access.
 
 ### Features:
 - 🌟 Animated ASCII welcome screen with typewriter and loading effects
